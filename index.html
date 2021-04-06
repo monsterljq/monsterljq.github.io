@@ -189,20 +189,63 @@
 <p>下载安装好后，需要检查电脑是否确定安装成功。摁住win + R 键打开命令窗口：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
-<p>显示以下内容表示成功：<br><img src="https://img-blog.csdnimg.cn/2021040422133686.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1X2xvbmdf,size_16,color_FFFFFF,t_70"></p>
+<p>显示以下内容表示成功：<br><img src="https://img-blog.csdnimg.cn/20210405214633940.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1X2xvbmdf,size_16,color_FFFFFF,t_70"></p>
 <h3 id="第二步（The-second-step）"><a href="#第二步（The-second-step）" class="headerlink" title="第二步（The second step）"></a>第二步（The second step）</h3><p>下载<a target="_blank" rel="noopener" href="https://gitforwindows.org/">git</a>并安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>国内镜像源速度慢，所以利用npm安装一个cnpm（镜像源指向淘宝）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g cnpm --registry=[http://registry.npm.taobao.org](http://registry.npm.taobao.org/)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>查看cnpm是否安装成功</p>
+<p>cnpm -v</p>
+<p>安装成功</p>
+<p><img src="https://img-blog.csdnimg.cn/20210405223211392.jpg#pic_center"></p>
+<h3 id="第三步："><a href="#第三步：" class="headerlink" title="第三步："></a>第三步：</h3><p>本地安装hexo静态博客框架打开命令指示符窗口进行操作</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>输入上示代码回车后自动进行全局安装</p>
+<p>框架安装完成</p>
+<p>查看hexo版本</p>
+<p>hexo -v （我的是4.2.0）</p>
+<p>选择一个D/E盘中的一个位置，创建一个新文件夹blog（此处你可随意命名），并点击进入此文件夹，此时这是一个空文件夹，啥也没有。在此空文件夹目录下点击右键，选择Git Bash Here，进入git命令窗口输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm install hexo-cli -g</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>hexo安装成功</p>
+<p>安装 hexo 部署到 git page 的 deployer</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>部署成功</p>
+<p>初始化hexo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<p>初始化成功</p>
+<p>启动hexo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s（or hexo s --debug）</span><br></pre></td></tr></table></figure>
+
+<p>出现下图表示本地部署已经完成，然后我们进入本地网址](<a href="http://localhost:4000)查看我们的博客">http://localhost:4000)查看我们的博客</a></p>
+<p>可以看到一个网页，说明Hexo已经成功在本地运行。</p>
+<h3 id="第四步：将本地博客部署到Github上"><a href="#第四步：将本地博客部署到Github上" class="headerlink" title="第四步：将本地博客部署到Github上"></a>第四步：将本地博客部署到Github上</h3><p>1.首先你需要在(github)[<a target="_blank" rel="noopener" href="https://github.com/github]%E5%AE%98%E7%BD%91%EF%BC%88%E5%9B%A0%E4%B8%BAgithub%E5%B1%9E%E4%BA%8E%E5%9B%BD%E5%A4%96%E7%BD%91%E7%AB%99%EF%BC%8C%E5%9B%BD%E5%86%85%E5%8A%A0%E8%BD%BD%E7%9A%84%E8%AF%9D%E4%BC%9A%E6%9C%89%E7%82%B9%E6%85%A2%EF%BC%89%E6%B3%A8%E5%86%8C%E4%B8%80%E4%B8%AA%E8%B4%A6%E5%8F%B7%E3%80%82">https://github.com/github]官网（因为github属于国外网站，国内加载的话会有点慢）注册一个账号。</a><br>2.点击New repository开始创建，注意Repository name必须为你的用户名+github.io，完成创建就可以了</p>
+<p>3.配置SSH密钥<br>只有配置好SSH密钥之后我们才可以实现本地代码库与GitHub库关联起来</p>
+<p>在博客所属的文件夹下右击鼠标右键打开Git Bash Here输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;your email&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>两次回车就可以</p>
+<p>接下来会出现一堆奇怪的东西，不用管他，继续输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<p>4.在GitHub上添加你的公钥点击头像再点击Settings进入之后点击SSH and GPG keys</p>
+<p>再点击New SSH key,Title填什么都可以，并将之前复制到粘贴板的公钥粘贴到此处即可。</p>
+<p>四.创建项目代码库</p>
+<p>在本地blog文件夹下新建一个hexo文件夹（此处命名你可以随意），点击进入hexo文件夹。<br>此时这是一个空文件夹啥也没有。在此空文件夹目录下点击右键，选择Git Bash Here，<br>进入git命令窗口输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --savehexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p>安装成功（此处是安装一个插件）</p>
+<p>五.配置个人信息<br>1.在hexo文件夹目录下，输入下面的两个命令（用户名和邮箱替换成自己的）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;your user name&quot;</span></span><br><span class="line"></span><br><span class="line">git config --global user.email <span class="string">&quot;your email&quot;</span></span><br></pre></td></tr></table></figure>
+<p>2.将Hexo文件更新到GitHub库中<br>进入你创建的new repository“user name ” .github.io,点击Code复制SSH</p>
+<p>打开你创建的博客文件夹（我的是hexo），右击用记事本打开_config.yml文件</p>
+<p>一直拉到最后，按下图修改并且保存（repository改成自己复制的内容，并且注意冒号后面都有一个空格）</p>
+<p>在hexo文件执行命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+<p>你的博客就部署到GitHub上面了，博客地址是“你的用户名”.github.io</p>
  
       <!-- reward -->
       
