@@ -83,10 +83,4 @@
 <p>你的博客就部署到GitHub上面了，博客地址是“你的用户名”.github.io说</p>
 ]]></content>
   </entry>
-  <entry>
-    <title>My first blog</title>
-    <url>/2021/04/06/second/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://monsterljq.github.io/">My first blog</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-]]></content>
-  </entry>
 </search>
