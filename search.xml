@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>My first blog</title>
-    <url>/2021/04/03/hello-world/</url>
+    <url>/2021/04/03/first/</url>
     <content><![CDATA[<p>Welcome to <a href="https://monsterljq.github.io/">My first blog</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h2 id="如果你想创作自己的博客，你可以按如下步骤："><a href="#如果你想创作自己的博客，你可以按如下步骤：" class="headerlink" title="如果你想创作自己的博客，你可以按如下步骤："></a>如果你想创作自己的博客，你可以按如下步骤：</h2><p>If you want to create your own blog, you can follow these steps to do so：</p>
 <h3 id="第一步（The-first-step）"><a href="#第一步（The-first-step）" class="headerlink" title="第一步（The first step）"></a>第一步（The first step）</h3><p>你需要下载<a href="https://nodejs.org/zh-cn/">node.js</a>这个软件。下载的版本你需要依据你所使用的电脑的型号。（64位 or 32位，当然这是相对于windows系统的电脑而言。）如果你是苹果或是linux，以下步骤只能作为参考。</p>
@@ -81,6 +81,35 @@
 
 <p><img src="https://img-blog.csdnimg.cn/20210406213100240.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1X2xvbmdf,size_16,color_FFFFFF,t_70#pic_center"></p>
 <p>你的博客就部署到GitHub上面了，博客地址是“你的用户名”.github.io说</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>主题设置</title>
+    <url>/2021/04/11/%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="Github主页更换主题"><a href="#Github主页更换主题" class="headerlink" title="Github主页更换主题"></a>Github主页更换主题</h1><h2 id="1、hexo主题官网（选择一个你喜欢的主题）"><a href="#1、hexo主题官网（选择一个你喜欢的主题）" class="headerlink" title="1、hexo主题官网（选择一个你喜欢的主题）"></a>1、<a href="https://hexo.io/themes/">hexo</a>主题官网（选择一个你喜欢的主题）</h2><p><img src="https://img-blog.csdnimg.cn/20210411215148569.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1X2xvbmdf,size_16,color_FFFFFF,t_70#pic_center"></p>
+<p>点击进入主题查看安装步骤（以hexo主题中的一个主题<a href="https://github.com/mulder21c/hexo-theme-amorfati">Amorfati</a>为例）</p>
+<p><img src="https://img-blog.csdnimg.cn/20210411220351127.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1X2xvbmdf,size_16,color_FFFFFF,t_70#pic_center"></p>
+<p>按照上面的步骤</p>
+<p>右击鼠标打开git Bash Here 输入：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd &quot;你的博客文档&quot;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone -b master --single-branch --depth&#x3D;1 https:&#x2F;&#x2F;github.com&#x2F;mulder21c&#x2F;hexo-theme-amorfati.git themes&#x2F;amorfati</span><br></pre></td></tr></table></figure>
+
+<p>第二行代码最后表示克隆的文件保存在themes文档下，命名为amorfati，当让你也可以省去这些，手动操作也是可以的。</p>
+<p>但如果你在输入第二行命令后，系统提示错误，你可以改成：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone -b master --single-branch --depth&#x3D;1 git:&#x2F;&#x2F;github.com&#x2F;mulder21c&#x2F;hexo-theme-amorfati.git themes&#x2F;amorfati</span><br></pre></td></tr></table></figure>
+
+<p>如果还是不好使（我能力有限），你就可以去问问度娘了。（CSDN一定是个不错的选择）。</p>
+<h2 id="2-修改主题配置"><a href="#2-修改主题配置" class="headerlink" title="2.修改主题配置"></a>2.修改主题配置</h2><p>复制下载后的主题名（此处为：amorfati）</p>
+<p>打开博客目录下的_config.yml  文件，并修改主题设置，将主题命设置为复制主题文件名即可。 </p>
+<p><img src="https://img-blog.csdnimg.cn/20210411222038345.jpg#pic_center"></p>
+<p>当然，为了保险起见，你也可以进入themes/amorfati主题下，右击鼠标，选择git Bash Here，输入：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
+
+<p>一般情况是不用的，但也没什么坏处。</p>
+<p>然后就可以上传查看效果了。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo s(or hexo s --debug)</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+
 ]]></content>
   </entry>
 </search>
